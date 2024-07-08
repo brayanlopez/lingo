@@ -1,6 +1,6 @@
 # To learn more about how to use Nix to configure your environment
 # see: https://developers.google.com/idx/guides/customize-idx-env
-{pkgs}: {
+{ pkgs }: {
   # Which nixpkgs channel to use.
   channel = "stable-23.11"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
@@ -11,18 +11,32 @@
     pkgs.bun
   ];
   # Sets environment variables in the workspace
-  env = {};
+  env = { };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-      "esbenp.prettier-vscode"
       "aaron-bond.better-comments"
+      "bradlc.vscode-tailwindcss"
+      "christian-kohler.npm-intellisense"
+      "christian-kohler.path-intellisense"
+      "dbaeumer.vscode-eslint"
+      "donjayamanne.githistory"
       "dracula-theme.theme-dracula"
+      "eamodio.gitlens"
+      "esbenp.prettier-vscode"
       "formulahendry.auto-close-tag"
       "formulahendry.auto-rename-tag"
-      "yzhang.markdown-all-in-one"
+      "GitHub.vscode-github-actions"
+      "GitHub.vscode-pull-request-github"
+      "mhutchie.git-graph"
       "naumovs.color-highlight"
-      "bradlc.vscode-tailwindcss"
+      "streetsidesoftware.code-spell-checker"
+      "usernamehw.errorlens"
+      "wix.vscode-import-cost"
+      "yzhang.markdown-all-in-one"
+      "PKief.material-icon-theme"
+      "bbenoist.Nix"
+      "jnoortheen.nix-ide"
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
@@ -36,7 +50,7 @@
       enable = true;
       previews = {
         web = {
-          command = ["npm" "run" "dev" "--" "--port" "$PORT" "--hostname" "0.0.0.0"];
+          command = [ "npm" "run" "dev" "--" "--port" "$PORT" "--hostname" "0.0.0.0" ];
           manager = "web";
         };
       };
