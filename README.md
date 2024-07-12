@@ -37,6 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## TODO
 
-- [ ] check clerk documentation for deprecated methods
+- [x] check clerk documentation for deprecated methods
+- [ ] add icons for sidebar menu, check for icon libraries
 
 **Current step:** Footer
