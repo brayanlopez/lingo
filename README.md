@@ -37,7 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## TODO
 
-- [ ] check clerk implementation
 - [ ] check clerk documentation for deprecated methods
 
 **Current step:** Footer
